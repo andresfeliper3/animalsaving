@@ -9,7 +9,7 @@ body {
 
 .navbar-header {
     float: left;
-    padding-top: 50px;
+    padding-top: 25px;
     text-align: center;
     width: 100%;
 }
@@ -49,12 +49,14 @@ legend {
 }
 
 #logo {
-  height:120px;
-  width:120px;
-  position:absolute;
-  margin-left:-350px;
-  margin-top:-35px;
+  height:130px;
+  width:130px;
+  position:relative;
+  margin-bottom:20px;
+  margin-left:20px;
+
 }
+
 #logo:hover {
   opacity:0.85;
 }
@@ -136,8 +138,8 @@ a.producto:hover {
   z-index: 20;
 }
 a.navbar-brand {
-  /*font-size:30px;
-  font-weight:bold;*/
+  font-size:50px;
+  font-weight:bold;
 
 }
 /* Flip around the padding for proper display in narrow viewports */

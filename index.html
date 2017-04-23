@@ -42,24 +42,26 @@
           <div class="container">
 
             <div class="navbar-header">
-                <img id="logo" src="img/logo.png"/>
+                <div class="row">
+                    <div class="col-xs-11">
 
 
-              <div id="bloquextra">
-              </div>
+                        <img id="logo" src="img/logo.png"/>
+
               <!-- Trigger the modal with a button -->
 <img id="logo-fijo"  data-target="#myModal" data-toggle="modal"src="img/logo.png"/>
 
-
-
-
-              <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Animal Saving navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>-->
-              <a class="navbar-brand" href="#">Animal Saving</a>
+
+              <a id="titulo" class="navbar-brand" href="#">Animal Saving</a>
+
+            </div>
+              </div>
             </div>
             <!--<div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -155,16 +157,16 @@
           <fieldset>
         <legend>Datos del dueño</legend>
         <div class="form-group row">
-          <label for="example-text-input" class="col-xs-2 col-form-label">Nombre completo</label>
+          <label for="nombre-cliente" class="col-xs-2 col-form-label" >Nombre completo</label>
           <div class="col-xs-5">
-            <input class="form-control" type="text" maxlength="70" required>
+            <input class="form-control" type="text" maxlength="70" name="nombre-cliente" required>
             </div>
         </div>
 
         <div class="form-group row">
-          <label for="example-text-input" class="col-xs-2 col-form-label">Email</label>
+          <label for="example-text-input" class="col-xs-2 col-form-label" >Email</label>
           <div class="col-xs-5">
-            <input class="form-control" type="email"  required>
+            <input class="form-control" type="email" name="Email" required>
 
 
             </div>
@@ -172,7 +174,7 @@
         <div class="form-group row">
           <label for="example-text-input" class="col-xs-2 col-form-label">Número</label>
           <div class="col-xs-5">
-            <input class="form-control" type="tel"  required>
+            <input class="form-control" type="tel" name="Numero "required>
             </div>
         </div>
                 <br >
@@ -180,6 +182,7 @@
 
         <!--  <label>Nombre de la mascota</label>
             <input id="campo1" name="mascota" type="text" />-->
+
             <div class="otrodiv" >
               <span class="deco">Collar #1</span>
             </div>
@@ -374,7 +377,7 @@
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>--><!-- /.col-lg-4 -->
-      <!--></div><!-- /.row -->
+      <!--></div> <!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
