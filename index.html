@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 <link rel="icon" type="image-x/icon" href="img/icon.png"/>
@@ -32,6 +33,43 @@ img.emoji {
 	vertical-align: -0.1em !important;
 	background: none !important;
 	padding: 0 !important;
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 100;
+    background: #DFDFDF;
+}
+#login-option:hover{
+	cursor:pointer;
+}
+.white-background{
+	background-color: white;
+}
+#myModal{
+
+
+}
+#ventana-emergente{
+	background-color:#333;
 }
 </style>
 <link rel='stylesheet' id='twentyseventeen-fonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -69,13 +107,13 @@ img.emoji {
 	<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18"><a  style="color:white;" href="#">Inicio</a></li>
 <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a style="color:white;" href="pide_tu_collar/index.html">Pide tu collar!</a></li>
 <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a style="color:white;" href="encontraste_una_mascota/index.html">¿Encontraste una mascota?</a></li>
+<li id="login-option" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a style="color:white;" data-toggle="modal" data-target="#myModal">Iniciar sesión</a></li>
 
 </ul></div>
 <a href="#content" class="menu-scroll-down"><svg class="icon icon-arrow-right" aria-hidden="true" role="img"> <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use> </svg><span class="screen-reader-text">Deslizar</span></a>
 </nav><!-- #site-navigation -->
 	</div><!-- .wrap -->
 </div><!-- .navigation-top -->
-
 
 		<div class="custom-header">
 
@@ -107,6 +145,7 @@ img.emoji {
 
 
 	</header><!-- #masthead -->
+
 
 
 	<div class="site-content-contain">
@@ -252,6 +291,177 @@ img.emoji {
 
 </article><!-- #post-## -->
 
+<!--Panel de inicio de sesión y registro-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+				<div id="ventana-emergente" class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										×</button>
+								<h4 class="modal-title" id="myModalLabel">
+										Login/Registration -</h4>
+						</div>
+						<div class="modal-body">
+								<div class="row">
+										<div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+												<!-- Nav tabs -->
+
+													<ul class="nav nav-tabs">
+
+															<li class="active col-5"><a href="#Login" data-toggle="tab">Entrar</a></li>
+															<li class="active col-7"><a href="#Registration" data-toggle="tab">Registrarse</a></li>
+
+													</ul>
+
+												<!-- Tab panes -->
+												<div class="tab-content">
+													<div class="tab-pane" id="ResetPassword">
+																<div role="form" class="form-horizontal">
+																<div class="form-group">
+																	<label for="ResetPassword" class="col-sm-5 control-label">
+																				Ingresa tu correo:</label>
+																		<div class="col-sm-10">
+																				<input name="ResetPassword" type="email" class="white-background" id="reset_email" placeholder="Recupera tu contraseña" />
+																					<br>
+																					<button onclick="resetPassword()" type="submit" class="btn btn-primary btn-sm">
+																						Recuperar</button>
+																		</div>
+																</div>
+																</div>
+															</div>
+														<div class="tab-pane active" id="Login">
+																<div role="form" class="form-horizontal">
+																<div class="form-group">
+																		<label for="email" class="col-sm-5 control-label">
+																				Email</label>
+																		<div class="col-sm-10">
+																				<input type="email" class="white-background" id="login_email" placeholder="Correo electrónico" />
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="exampleInputPassword1" class="col-sm-5 control-label">
+																				Password</label>
+																		<div class="col-sm-10">
+																				<input type="password" class="form-control white-background" id="login_password" placeholder="Contraseña" />
+																		</div>
+																</div>
+																<div class="row">
+																		<div class="col-sm-2">
+																		</div>
+																		<div class="col-sm-10">
+																				<button onclick="login()" type="submit" class="btn btn-primary btn-sm">
+																						Entrar</button>
+																				<a href="#ResetPassword" data-toggle="tab">¿Olvidaste tu contraseña?</a>
+																		</div>
+																</div>
+															</div>
+														</div>
+														<div class="tab-pane" id="Registration">
+																<form role="form" class="form-horizontal">
+																<div class="form-group">
+																		<label for="name" class="col-sm-3 control-label">
+																				Nombre</label>
+																		<div class="col-sm-10">
+																				<div class="row">
+																						<div class="col-md-3">
+																								<select class="form-control">
+																									<option></option>
+																								</select>
+																						</div>
+																						<div class="col-md-9">
+																								<input id="firstname" name="name" type="text" class="form-control" placeholder="Nombre" required/>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="lastname" class="col-sm-3 control-label">
+																				Apellidos</label>
+																		<div class="col-sm-10">
+																				<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Apellido" required/>
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="username" class="col-sm-3 control-label">
+																				Nombre de usuario</label>
+																		<div class="col-sm-10">
+																				<input name="username" type="text" class="form-control" id="username" placeholder="Nombre de usuario" required/>
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="email" class="col-sm-2 control-label">
+																				Email</label>
+																		<div class="col-sm-10">
+																				<input type="email" class="form-control" id="email" placeholder="Email" required/>
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="mobile" class="col-sm-3 control-label">
+																				Teléfono</label>
+																		<div class="col-sm-10">
+																				<input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="password" class="col-sm-3 control-label">
+																				Contraseña</label>
+																		<div class="col-sm-10">
+																				<input type="password" class="form-control" id="password" placeholder="Contraseña" required/>
+																		</div>
+																</div>
+																<div class="form-group">
+																		<label for="password" class="col-sm-3 control-label">
+																				Confirmar contraseña</label>
+																		<div class="col-sm-10">
+																				<input type="password" class="form-control" id="c_password" placeholder="Confirmar contraseña" requried/>
+																		</div>
+																</div>
+																<div class="row">
+																		<div class="col-sm-2">
+																		</div>
+																		<div class="col-sm-10">
+																				<button onclick="signIn()" type="button" class="btn btn-primary btn-sm">
+																						Continuar</button>
+																				<button type="button" class="btn btn-default btn-sm">
+																						Cancelar</button>
+																		</div>
+																</div>
+																</form>
+														</div>
+
+
+												</div>
+												<div id="OR" class="hidden-xs">
+														OR</div>
+										</div>
+										<div class="col-md-4">
+												<div class="row text-center sign-with">
+														<div class="col-md-12">
+																<h3>
+																		Sign in with</h3>
+														</div>
+														<div class="col-md-4">
+
+																<div class="btn-group btn-group-justified">
+																	<div class="row">
+																   	<div onclilck="facebook()"class="col-md-12 col-lg-9">
+																			<a  class="btn btn-primary">Facebook</a>
+																		</div>
+																		<div class="col-md col-lg-3">
+																			<a href="#" class="btn btn-danger">
+																						Google</a>
+																		</div>
+																	</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
 
 
 	<nav class="social-navigation" role="navigation" aria-label="Footer Social Links Menu">
@@ -287,6 +497,24 @@ img.emoji {
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+<script src="jquery2.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAcdFuHxshFQzkSfrbXVIIKZrvk0AUZqdc",
+    authDomain: "animal-saving.firebaseapp.com",
+    databaseURL: "https://animal-saving.firebaseio.com",
+    projectId: "animal-saving",
+    storageBucket: "animal-saving.appspot.com",
+    messagingSenderId: "83818884837"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="app.js" ></script>
 <link rel='stylesheet' id='elementor-post-11-css'  href='http://tecnoinnova2017.com/wp-content/uploads/elementor/css/post-11.css?ver=1492753652' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-post-8-css'  href='http://tecnoinnova2017.com/wp-content/uploads/elementor/css/post-8.css?ver=1492754218' type='text/css' media='all' />
 <script type='text/javascript'>
