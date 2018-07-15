@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image-x/icon" href="img/icon.png"/>
+    <link rel="icon" type="image-x/icon" href="img/icon.png">
 
     <title>Animal Saving</title>
 
@@ -30,29 +30,37 @@
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
-    <!--<script src="jquery.js"></script>-->
+    <script src="jquery.js"></script>
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
 
 
-              <!-- Trigger the modal with a button -->
-<img onclick="logout()" id="logo-fijo" src="img/logo.png"/>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+
+              <!-- Trigger the modal with a button -->
+<img id="logo-fijo"  src="img/logo.png"/>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
                 <span class="sr-only">Animal Saving navigation</span>
-                <span class="icon-bar">Inicio</span>
-                <span class="icon-bar">¡Pide tu collar!</span>
-                <span class="icon-bar">¿Encontraste una mascota?</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
+
+
 
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a style ="color:white; font-weight:bold" href="../login_session/index.html">Inicio</a></li>
-                <li><a style ="color:white; font-weight:bold" href="../pide_tu_collar/index.html">Pide tu collar!</a></li>
-                <li><a style ="color:white; font-weight:bold" href="#">¿Encontraste una mascota?</a></li>
-            <!--    <li class="dropdown">
+
+                <li class="menu-items"><a style="color:#222222; font-weight:bold; background-color:white" href="index.html">Inicio</a></li>
+                <li class="menu-items"><a style="color:white; font-weight:bold" href="index.html">Pide tu collar</a></li>
+                <li class="menu-items"><a style="color:white; font-weight:bold; " href="../encontraste_una_mascota/index.html">¿Encontraste una mascota? </a></li>
+                  <li class="menu-items"><a style="color:white; font-weight:bold; " href="../nuevo/index.html">Nueva mascota </a></li>
+
+              <!--  <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -61,11 +69,12 @@
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Nav header</li>
                     <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>-->
                   </ul>
                 </li>
               </ul>
-            </div>-->
+              <button id="logout_button" onclick="logout()">Cerrar sesión</button>
+            </div>
           </div>
         </nav>
 
@@ -75,51 +84,7 @@
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="http://www.ringoymirringo.com/wp-content/uploads/2016/09/slider1-tienda-de-mascotas-ringo-y-mirringo.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
 
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="http://www.grafimon.com/wp-content/uploads/2015/09/mascota.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <a class="producto" href="#h-collar2">
-              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="http://www.viajarconperrosygatos.com/wp-content/uploads/2016/04/portada-perros-gatos1920.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <a class="producto" href="#h-collar3 "></a>
-
-              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
-    </div><!-- /.carousel -->
 
 
     <!-- Marketing messaging and featurettes
@@ -132,20 +97,94 @@
       <div class="row">
         <div class="col-xs-12">
 
-        <h1><b>¿Encontraste una mascota?</b></h1>
-        <h4>Ingresa el código del collar aquí:</h4>
-        <form>
-        <div class="col-xs-5">
-          <input class="form-control" type="text" maxlength="4" name="codigo" id="codigo">
-          <input type="submit" id="boton" value="Enviar">
-          </div>
-        </form>
 
-        <div class="col-lg-10">
-          <br />
-          <div id="contenido">
-              <p id="para"></p>
-          </div>
+        <h1 id="pide">Busca una mascota</h1><br>
+        <h5 id="add_pet"><a href="../nuevo/index.html">Agregar una mascota</a></h5>
+        <br />
+        <hr>
+        <!--
+        <form id="formulario" action="" method="post">
+          <fieldset>
+        <legend>Datos del dueño</legend>
+        <div class="form-group row">
+          <label for="nombre-cliente" class="col-xs-2 col-form-label" >Nombre completo</label>
+          <div class="col-xs-5">
+            <input class="form-control" type="text" maxlength="70" name="nombre-cliente" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-2 col-form-label" >Email</label>
+          <div class="col-xs-5">
+            <input class="form-control" type="email" name="Email" required>
+
+
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-2 col-form-label">Número</label>
+          <div class="col-xs-5">
+            <input class="form-control" type="tel" name="Numero "required>
+            </div>
+        </div>
+                <br >
+          <legend>Datos de la mascota</legend>
+-->
+        <!--  <label>Nombre de la mascota</label>
+            <input id="campo1" name="mascota" type="text" />-->
+            <div role="form">
+              <div class="form-group row">
+                <div class="col-xs-12">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Mascota</label><br>
+                      <input class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="search" placeholder="Ingrese aquí...">
+                    </div>
+                    <div class="col-md-3">
+
+                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Nombre de mascota</label>
+                      <br>
+
+                    <input class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="name_search" placeholder="Ingrese aquí...">
+                    </div>
+                    <div class="col-md-1">
+                    <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="kind_animal">Tipo</label>
+                    <select class="searcher col-xs-12 col-sm-8 col-md-12" name="kind_animal" id="">
+                      <option value="Perro">Perro</option>
+                      <option value="Gato">Gato</option>
+                      <option value="Pájaro">Pájaro</option>
+                    </select>
+                    </div>
+                    <div class="col-md-1">
+                    <label class="col-xs-12  col-sm-8 col-md-12 col-form-label" for="age">Edad</label><br>
+                    <select class="col-xs-12  col-sm-8  col-md-12 searcher" name="age" id="">
+                      <option >Menos 1 mes</option>
+                      <option >1 mes</option>
+                      <option >2 meses</option>
+                      <option >3 meses</option>
+                      <option >4 meses</option>
+                      <option >5 meses</option>
+                      <option >6 meses</option>
+                      <option >Más de 6 meses</option>
+                      <option >1 año</option>
+                      <option >Más de 1 año</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="usersearch">Búsqueda por usuario</label>
+                    <input class="searcher col-xs-12 col-sm-8 col-md-12" type="text" name="usersearch" placeholder="Buscar usuario">
+                  </div>
+
+                      <div class="input-group-append">
+                        <button id="search_button" class="btn btn-primary" type="submit">Buscar</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        <div class="col-lg-4">
 
           <!--<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>Heading</h2>
@@ -173,6 +212,29 @@
 
 
 
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 id="h-collar2" class="featurette-heading">Collar #2 <br ><span class="text-muted"></span></h2>
+          <p class="lead">Collar color café y verde. Disponible para mascotas de diferentes tamaños.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="http://images1.tiendanimal.es/g/collar-para-perros-forest-color-verde-mta-11510.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 id="h-collar3" class="featurette-heading">Collar #3 <br ><span class="text-muted"></span></h2>
+          <p class="lead">Collar color negro elegante. Disponible para mascotas de diferentes tamaños.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="http://images1.tiendanimal.es/g/collar-para-perros-technical-confort-color-negro-mta-11661.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
 
       <hr class="featurette-divider">
 
@@ -217,9 +279,7 @@
     <script src="assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -232,11 +292,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="app4.js">
-
-</script>
-  <!--  <script src="app2.js"></script>-->
-    <!-- <script src="app3.js"></script> -->
+    <script src="app4.js"></script>
 
   </body>
 </html>

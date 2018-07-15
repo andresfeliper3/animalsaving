@@ -1,7 +1,36 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
+.menu-items:hover {
+  color:#222;
+}
+#add_pet {
+  float:right;
+  clear:both;
+  color:#0489B1
+}
+#add_pet:hover {
+  text-decoration: underline;
+  cursor:pointer;
+}
+.searcher {
+  border-radius:5px;
+  height:30px;
+  display:inline-block;
+  padding:6px;
+}
+#logout_button {
+  float:right;
+  margin-top:5px;
+}
+#search_button {
+  display:inline-block;
+  float:right;
+}
+select {
+  background-color: #f1f1f1;
+  padding:10px;
+}
 body {
 
 
@@ -10,7 +39,8 @@ body {
   color:black;
 }
 #navbar{
-  background-color: #222
+  background-color: #222;
+
 }
 .navbar.navbar-inverse.navbar-static-top {
   background-color: #9e9b9a;
@@ -19,7 +49,7 @@ body {
 }
 .navbar-header {
     float: left;
-    padding-top: 25px;
+    padding-top: 30px;
     text-align: center;
     width: 100%;
 }
