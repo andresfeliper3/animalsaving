@@ -9,7 +9,6 @@ $(document).ready(function(){
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    alert("Sesión iniciada");
     location.assign("login_session/index.html");
   } else {
     // No user is signed in.
@@ -59,19 +58,54 @@ function signIn() {
   var password = document.getElementById("password").value;
   var confirm_password = document.getElementById("c_password").value;
   var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
+  var username = document.getElementById("username").value;
+  var phone_number = document.getElementById("mobile").value;
+  var database = firebase.database();
+  var ref = database.ref("users");
+
   if(password.length>=8) {
     if (password == confirm_password) {
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
 
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+
+        var user_info = {
+          Firstname:firstname,
+          Lastname: lastname,
+          Email:email,
+          Username:username,
+          Phone:phone_number,
+          Password:password
+        }
+        var user = firebase.auth().currentUser;
+        user.sendEmailVerification().then(function() {
+          // Email sent.
+          alert("Correo enviado");
+        }).catch(function(error) {
+          // An error happened.
+        //  alert("Error en el envío");
+        });
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+          ref.child(user.uid).set(user_info);
+          location.assign("profile/index.html");
+          } else {
+            // No user is signed in.
+          }
+        });
+
+
+
+      }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
     });
-    if (user != null) {
-      name = user.displayName;
-      user.displayName = firstname;
-    }
+
+
+
     } else {
     alert("Las contraseñas no son iguales");
     }

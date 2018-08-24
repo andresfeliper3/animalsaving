@@ -1,33 +1,16 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-.post-results {
-  width:auto;
-  height:100px;
-  margin-top:3px;
+#profile_pic {
+  border-radius: 2px;
+  padding:2px;
+}
+#edit_pic {
 
-}
-.post-small, .post-small-far {
-  font-family:Verdana;
-  color:#0B4C5F;
-}
-.post-small{
-  width:120px;
-  height:100px;
   display:inline-block;
-  text-align:right;
-}
-.post-small-far {
-  width:120px;
-  height:100px;
-  display:inline-block;
-  margin-left:10%;
 }
 .menu-items:hover {
   color:#222;
-}
-.white:active {
-  color:white;
 }
 #add_pet {
   float:right;

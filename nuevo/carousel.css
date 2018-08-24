@@ -1,6 +1,9 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+#male, #female {
+  display:inline-block;
+}
 .menu-items:hover {
   color:#222;
 }
@@ -19,9 +22,14 @@
   display:inline-block;
   padding:6px;
 }
+#logout {
+  right:5px;
+  position:absolute;
+  margin-top:1%;
+}
 #logout_button {
-  float:right;
-  margin-top:5px;
+  border-radius: 5px;
+  border:1px solid #222;
 }
 #search_button {
   display:inline-block;
@@ -40,7 +48,7 @@ body {
 }
 #navbar{
   background-color: #222;
-
+  width:100%;
 }
 .navbar.navbar-inverse.navbar-static-top {
   background-color: #9e9b9a;

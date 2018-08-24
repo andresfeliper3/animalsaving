@@ -56,9 +56,11 @@
               <ul class="nav navbar-nav">
 
                 <li class="menu-items"><a style="color:white; font-weight:bold;" href="../login_session/index.html">Inicio</a></li>
-                <li class="menu-items"><a style="color:white; font-weight:bold" href="index.html">Pide tu collar</a></li>
-                <li class="menu-items"><a style="color:white; font-weight:bold; " href="../encontraste_una_mascota/index.html">¿Encontraste una mascota? </a></li>
+                <!--<li class="menu-items"><a style="color:white; font-weight:bold" href="index.html">Pide tu collar</a></li>
+                <li class="menu-items"><a style="color:white; font-weight:bold; " href="../encontraste_una_mascota/index.html">¿Encontraste una mascota? </a></li>-->
                   <li class="menu-items"><a style="color:#222222; font-weight:bold; background-color:white " href="index.html">Nueva mascota </a></li>
+                  <li class="menu-items"><a style="color:white; font-weight:bold; background-color:#222 " href="../profile/index.html">Mi perfil </a></li>
+                  <li id="logout" class="menu-items"><button id="logout_button"style="color:#222; font-weight:bold; background-color:white" onclick="logout()">Cerrar sesión</button></li>
               <!--  <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -72,7 +74,6 @@
                   </ul>
                 </li>
               </ul>
-              <button id="logout_button" onclick="logout()">Cerrar sesión</button>
             </div>
           </div>
         </nav>
@@ -135,62 +136,77 @@
               <div class="form-group">
                 <div class="row d-block">
                   <div class="col-xs-12 col-sm-8 col-md-5">
+                    <label for="pet_name">Raza de la mascota</label>
+                    <input id="pet_race" class="form-control"type="text" name="pet_name">
+                  </div>
+                </div>
+                <div class="row d-block">
+                  <div class="col-xs-12 col-sm-8 col-md-5">
                     <label for="pet_name">Nombre de la mascota</label>
-                    <input class="form-control"type="text" name="pet_name">
+                    <input id="pet_name" class="form-control"type="text" name="pet_name">
+                  </div>
+                </div>
+                <div class="row d-block">
+                  <div class="col-xs-12 col-sm-8 col-md-5">
+                    <label for="pet_city">Ciudad de residencia</label>
+                    <input id="pet_city" class="form-control"type="text" name="pet_city">
                   </div>
                 </div>
                 <div class="row d-block">
                   <div class="col-xs-12 col-sm-8 col-md-5 ">
-                    <label for="pet_name">Tipo de mascota</label>
-                    <select class="form-control"type="radio" name="pet_kind">
-                      <option value="">Perro</option>
-                      <option value="">Gato</option>
-                      <option value="">Pájaro</option>
+                    <label for="pet_kind">Tipo de mascota</label>
+                    <select id="pet_kind"class="form-control"type="radio" name="pet_kind">
+                      <option value="Perro">Perro</option>
+                      <option value="Gato">Gato</option>
+                      <option value="Ave">Ave</option>
                     </select>
                   </div>
                 </div>
                 <div class="row d-block">
                   <div class="col-xs-12 col-sm-8 col-md-5 ">
-                    <label for="pet_name">Edad de la mascota</label>
-                    <select class="form-control"type="radio" name="pet_kind">
-                      <option >Menos 1 mes</option>
-                      <option >1 mes</option>
-                      <option >2 meses</option>
-                      <option >3 meses</option>
-                      <option >4 meses</option>
-                      <option >5 meses</option>
-                      <option >6 meses</option>
-                      <option >Más de 6 meses</option>
-                      <option >1 año</option>
-                      <option >Más de 1 año</option>
+                    <label for="pet_age">Edad de la mascota</label>
+                    <select id="pet_age"class="form-control" type="radio" name="pet_age">
+                      <option value="Menos 1 mes">Menos 1 mes</option>
+                      <option value="1 mes">1 mes</option>
+                      <option value="2 meses">2 meses</option>
+                      <option value="3 meses">3 meses</option>
+                      <option value="4 meses">4 meses</option>
+                      <option value="5 meses">5 meses</option>
+                      <option value="6 meses">6 meses</option>
+                      <option value="Más de 6 meses">Más de 6 meses</option>
+                      <option value="1 año">1 año</option>
+                      <option value="Más de 1 año">Más de 1 año</option>
                     </select>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-5">
                     <label for="pet_name">Especificaciones</label>
-                    <textarea class="form-control" type="text" name="pet_specifications" placeholder="Raza, color, manchas.."></textarea>
+                    <textarea id="pet_maintext" class="form-control" type="text" name="pet_specifications" placeholder="Raza, color, manchas.."></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-5">
                     <label for="pet_img">Imagen de mascota</label>
-                    <input class="form-control" type="file" name="pet_img">
+                    <input id="pet_pic"class="form-control" type="file" name="pet_img">
                   </div>
                 </div>
                 <br />
                 <div class="col-xs-12 col-sm-12 col-md-12">
                   <div class="row">
-                    <input type="radio" id="male" name="pet_sex"><label for="male">Macho</label>
-                  </div>
-                  <div class="row">
-                    <input type="radio" id="female" name="pet_sex"><label for="female">Hembra</label>
+                    <div class="col-md-1">
+                      <input type="radio" id="male" name="pet_sex" value="M"><label for="male">Macho</label>
+                    </div>
+                    <div class="-col-md-1">
+                      <input type="radio" id="female" name="pet_sex" value="F"><label for="female">Hembra</label>
+                    </div>
                   </div>
                 </div>
                 <br />
+                <br>
                 <div class="row d-block">
                   <div class="col-xs-12 col-sm-12 col-md-5">
-                    <button class="btn btn-primary form-control" type="submit">Subir</button>
+                    <button id="submitBtn" onclick="submit()" class="btn btn-primary form-control" type="submit">Subir</button>
                   </div>
                 </div>
               </div>
@@ -304,7 +320,7 @@
   };
   firebase.initializeApp(config);
 </script>
-    <script src="app4.js"></script>
+    <script src="app.js"></script>
 
   </body>
 </html>

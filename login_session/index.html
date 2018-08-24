@@ -55,10 +55,12 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
 
-                <li class="menu-items"><a style="color:#222222; font-weight:bold; background-color:white" href="index.html">Inicio</a></li>
-                <li class="menu-items"><a style="color:white; font-weight:bold" href="index.html">Pide tu collar</a></li>
-                <li class="menu-items"><a style="color:white; font-weight:bold; " href="../encontraste_una_mascota/index.html">¿Encontraste una mascota? </a></li>
-                  <li class="menu-items"><a style="color:white; font-weight:bold; " href="../nuevo/index.html">Nueva mascota </a></li>
+                <li class="menu-items"><a style="color:#222; font-weight:bold; background-color:white" href="index.html">Inicio</a></li>
+                <!--<li class="menu-items"><a style="color:white; font-weight:bold" href="index.html">Pide tu collar</a></li>
+                <li class="menu-items"><a style="color:white; font-weight:bold; " href="../encontraste_una_mascota/index.html">¿Encontraste una mascota? </a></li>-->
+                  <li class="menu-items"><a style="color:white; font-weight:bold; background-color:#222 " href="../nuevo/index.html">Nueva mascota </a></li>
+                  <li class="menu-items"><a style="color:white; font-weight:bold; background-color:#222 " href="../profile/index.html">Mi perfil </a></li>
+                  <li id="logout" class="menu-items"><button id="logout_button"style="color:#222; font-weight:bold; background-color:white" onclick="logout()">Cerrar sesión</button></li>
 
               <!--  <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -73,7 +75,6 @@
                   </ul>
                 </li>
               </ul>
-              <button id="logout_button" onclick="logout()">Cerrar sesión</button>
             </div>
           </div>
         </nav>
@@ -137,19 +138,18 @@
                 <div class="col-xs-12">
                   <div class="row">
                     <div class="col-md-2">
-                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Mascota</label><br>
-                      <input class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="search" placeholder="Ingrese aquí...">
+                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Raza de mascota</label><br>
+                      <input id="search_pet" class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="search" placeholder="Ingrese aquí...">
                     </div>
                     <div class="col-md-3">
 
-                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Nombre de mascota</label>
+                      <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="search">Ciudad de residencia</label>
                       <br>
-
-                    <input class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="name_search" placeholder="Ingrese aquí...">
+                    <input id="search_city" class="searcher col-xs-12 col-sm-8 col-md-12" type="type" name="city_search" placeholder="Ingrese aquí...">
                     </div>
                     <div class="col-md-1">
                     <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="kind_animal">Tipo</label>
-                    <select class="searcher col-xs-12 col-sm-8 col-md-12" name="kind_animal" id="">
+                    <select class="searcher col-xs-12 col-sm-8 col-md-12" name="kind_animal" id="search_kind">
                       <option value="Perro">Perro</option>
                       <option value="Gato">Gato</option>
                       <option value="Pájaro">Pájaro</option>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-md-1">
                     <label class="col-xs-12  col-sm-8 col-md-12 col-form-label" for="age">Edad</label><br>
-                    <select class="col-xs-12  col-sm-8  col-md-12 searcher" name="age" id="">
+                    <select class="col-xs-12  col-sm-8  col-md-12 searcher" name="age" id="search_age">
                       <option >Menos 1 mes</option>
                       <option >1 mes</option>
                       <option >2 meses</option>
@@ -172,7 +172,7 @@
                   </div>
                   <div class="col-md-3">
                     <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="usersearch">Búsqueda por usuario</label>
-                    <input class="searcher col-xs-12 col-sm-8 col-md-12" type="text" name="usersearch" placeholder="Buscar usuario">
+                    <input id="search_user" class="searcher col-xs-12 col-sm-8 col-md-12" type="text" name="usersearch" placeholder="Buscar usuario">
                   </div>
 
                       <div class="input-group-append">
@@ -183,68 +183,40 @@
               </div>
             </div>
 
-
-        <div class="col-lg-4">
-
-          <!--<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>--><!-- /.col-lg-4 -->
-        <!--<div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>--><!-- /.col-lg-4 -->
-        <!--<div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>--><!-- /.col-lg-4 -->
-      <!--></div> <!-- /.row -->
-
-
+        <div class="col-lg-12">
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
-
-
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 id="h-collar2" class="featurette-heading">Collar #2 <br ><span class="text-muted"></span></h2>
-          <p class="lead">Collar color café y verde. Disponible para mascotas de diferentes tamaños.</p>
+        <div class="row">
+          <div class="col-md-2">
+            <h4>Imagen</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Nombre</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Usuario</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Raza</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Edad</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Ciudad</h4>
+          </div>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="http://images1.tiendanimal.es/g/collar-para-perros-forest-color-verde-mta-11510.jpg" alt="Generic placeholder image">
-        </div>
+        <br />
+      <div id="results" class="container marketing">
+          <div id="extra"></div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 id="h-collar3" class="featurette-heading">Collar #3 <br ><span class="text-muted"></span></h2>
-          <p class="lead">Collar color negro elegante. Disponible para mascotas de diferentes tamaños.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="http://images1.tiendanimal.es/g/collar-para-perros-technical-confort-color-negro-mta-11661.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
       <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Subir</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
@@ -273,6 +245,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery2.min.js"></script>
+    <script src="jquery.min.js"></script>
     <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
@@ -291,6 +264,7 @@
     messagingSenderId: "83818884837"
   };
   firebase.initializeApp(config);
+
 </script>
     <script src="app4.js"></script>
 
