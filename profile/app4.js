@@ -45,6 +45,7 @@ function update() {
 	var country = document.getElementById('country').value;
 	var city = document.getElementById('city').value;
 	var birthdate = document.getElementById('birthdate').value;
+	var personSex = document.querySelector('input[name="person_sex"]:checked').value;
 	var age = date(birthdate);
 	var database = firebase.database();
 
@@ -62,7 +63,8 @@ function update() {
 		ref.child(user.uid).child("City").set(city);
 		ref.child(user.uid).child("Birthdate").set(birthdate);
 		ref.child(user.uid).child("Age").set(age);
-		alert("Actualizado")
+		ref.child(user.uid).child("Sex").set(personSex);
+		alert("Actualizado");
 		} else {
 			// No user is signed in.
 		}

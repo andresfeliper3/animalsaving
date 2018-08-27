@@ -1,13 +1,74 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+.sharing {
+  width:600px;
+}
+.edit {
+  float:right;
+  color:#5C85B6;
+}
+
 .hidden-key {
   display:none;
 }
-#profile_pic {
-  border-radius: 2px;
-  padding:2px;
+#publish {
+  display:block;
 }
+#info {
+  display:none;
+}
+#pets {
+  display:none;
+}
+.no-display {
+  display:none;
+}
+.posts {
+  width:500px;
+  border:2px solid black;
+  margin-top:6px;
+}
+.close {
+  float:right;
+  margin-top:-80px;
+  padding:5px;
+}
+.user-name-post {
+  color:#5C85B6;
+  padding:5px;
+}
+.post-message {
+  padding:5px;
+}
+.post-results {
+  height:40px;
+  margin-top:5px;
+}
+.post-small {
+  font-family:Verdana;
+  font-weight:bold;
+  color:#337ac6;
+}
+.post-small:hover{
+  text-decoration:underline;
+  cursor:pointer;
+}
+.titles {
+  display:inline-block;
+  margin-left:7px;
+}
+#myprofile_pic {
+  border:1px solid blue;
+  height:200px;
+}
+
 #edit_pic {
 
   display:inline-block;
