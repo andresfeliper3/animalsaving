@@ -1,3 +1,45 @@
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    var db=firebase.database();
+    var myref=db.ref("users/"+user.uid+"/Username");
+      var yavalimos2=document.getElementById("yavalimos2");
+    myref.on("value",function(data){
+      yavalimos2.innerHTML=data.val();
+    })
+
+  }
+});
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#yavalimos2')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function logout() {
+	firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+	alert("Cerró sesión");
+	location.assign("../index.html")
+}).catch(function(error) {
+  // An error happened.
+  var errorCode = error.code;
+});
+}
 var username;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {

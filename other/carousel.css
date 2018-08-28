@@ -1,7 +1,76 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-#male, #female {
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+.sharing {
+  width:600px;
+}
+.edit {
+  float:right;
+  color:#5C85B6;
+}
+
+.hidden-key {
+  display:none;
+}
+#publish {
+  display:block;
+}
+#info {
+  display:none;
+}
+#pets {
+  display:none;
+}
+.no-display {
+  display:none;
+}
+.posts {
+  width:500px;
+  border:2px solid black;
+  margin-top:6px;
+}
+.close {
+  float:right;
+  margin-top:-80px;
+  padding:5px;
+}
+.user-name-post {
+  color:#5C85B6;
+  padding:5px;
+}
+.post-message {
+  padding:5px;
+}
+.post-results {
+  height:40px;
+  margin-top:5px;
+}
+.post-small {
+  font-family:Verdana;
+  font-weight:bold;
+  color:#337ac6;
+}
+.post-small:hover{
+  text-decoration:underline;
+  cursor:pointer;
+}
+.titles {
+  display:inline-block;
+  margin-left:7px;
+}
+#myprofile_pic {
+  border:1px solid blue;
+  height:200px;
+}
+
+#edit_pic {
+
   display:inline-block;
 }
 .menu-items:hover {
@@ -22,11 +91,15 @@
   display:inline-block;
   padding:6px;
 }
+#logout {
+  right:5px;
+  position:absolute;
+  margin-top:1%;
+}
 #logout_button {
   border-radius: 5px;
   border:1px solid #222;
 }
-
 #search_button {
   display:inline-block;
   float:right;
@@ -44,7 +117,7 @@ body {
 }
 #navbar{
   background-color: #222;
-  width:100%;
+
 }
 .navbar.navbar-inverse.navbar-static-top {
   background-color: #9e9b9a;
@@ -304,69 +377,3 @@ transition-delay
 .añadirmas1 {
     cursor: pointer;
 }
-/* Dropdown Button */
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    float: right;
-}
-#yavalimos{
-  background-color: black;
-  float: right;
-  position: absolute;
-  right: 35px;
-}
-#yavalimos2{
-  border: 1px solid #222;
-  height: 50px;
-}
-#yavalimos2:hover {
-  color:#222;
-  background-color: #f1f1f1;
-}
-#myDropdown{
-  background-color: #222;
-}
-#myDropdown a {
-  color: white;
-}
-
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
