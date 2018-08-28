@@ -20,7 +20,7 @@ function submit() {
     if (user) {
       // User is signed in.
       var submitBtn = document.getElementById('submitBtn');
-      var petRace = document.getElementById('pet_race').value;
+      var petRace = document.getElementById('pet_race').value.toLowerCase();
       var petName = document.getElementById('pet_name').value;
       var petCity = document.getElementById('pet_city').value;
       var petKind = document.getElementById('pet_kind').value;

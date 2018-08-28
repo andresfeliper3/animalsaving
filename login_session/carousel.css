@@ -1,6 +1,10 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+
+#search-results {
+  display:none;
+}
 .post-results {
   width:auto;
   height:100px;
@@ -56,6 +60,7 @@
 #search_button {
   display:inline-block;
   float:right;
+  margin-top:22px;
 }
 select {
   background-color: #f1f1f1;

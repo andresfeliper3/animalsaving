@@ -174,9 +174,15 @@
                     <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="usersearch">Búsqueda por usuario</label>
                     <input id="search_user" class="searcher col-xs-12 col-sm-8 col-md-12" type="text" name="usersearch" placeholder="Buscar usuario">
                   </div>
-
-                      <div class="input-group-append">
-                        <button id="search_button" class="btn btn-primary" type="submit">Buscar</button>
+                  <div class="col-md-1">
+                    <label class="col-xs-12 col-sm-8 col-md-12 col-form-label" for="usersearch">M/F</label>
+                    <select id="search_sex" class="searcher col-xs-12 col-sm-8 col-md-12" name="sexsearch">
+                      <option value="Macho">Macho</option>
+                      <option value="Hembra">Hembra</option>
+                    </select>
+                  </div>
+                      <div class="input-group-append col-md-1">
+                        <button onclick="buscar"id="search_button" class="btn btn-primary" type="submit">Buscar</button>
                       </div>
                   </div>
                 </div>
@@ -185,8 +191,7 @@
 
         <div class="col-lg-12">
       <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
+      <div id="search-results">
         <div class="row">
           <div class="col-md-2">
             <h4>Imagen</h4>
@@ -203,12 +208,46 @@
           <div class="col-md-2">
             <h4>Edad</h4>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-1">
             <h4>Ciudad</h4>
+          </div>
+          <div class="col-md-1">
+            <h4>Género</h4>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div id="the_search_results">
+        <div id="myextra"></div>
+      </div>
+      <hr class="featurette-divider">
+      <h1>Todo el contenido</h1>
+        <div class="row">
+          <div class="col-md-2">
+            <h4>Imagen</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Nombre</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Usuario</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Raza</h4>
+          </div>
+          <div class="col-md-2">
+            <h4>Edad</h4>
+          </div>
+          <div class="col-md-1">
+            <h4>Ciudad</h4>
+          </div>
+          <div class="col-md-1">
+            <h4>Género</h4>
           </div>
         </div>
         <br />
       <div id="results" class="container marketing">
+
           <div id="extra"></div>
       </div>
       <!-- /END THE FEATURETTES -->
@@ -265,6 +304,42 @@
   };
   firebase.initializeApp(config);
 
+
+  $(document).ready(function()
+  {
+
+  	function getParameterByName(name, url) {
+  	if (!url) url = window.location.href;
+  	name = name.replace(/[\[\]]/g, '\\$&');
+  	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+  			results = regex.exec(url);
+  	if (!results) return null;
+  	if (!results[2]) return '';
+  	return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+
+  		$("#search_button").click(function()
+  			{
+  				var search_pet = $("#search_pet").val().toLowerCase();
+  				var search_city = $("#search_city").val();
+  				var search_kind = $("#search_kind").val();
+  				var search_age = $("#search_age").val();
+  				var search_user = $("#search_user").val();
+          var search_sex = $("#search_sex").val();
+  				window.location = "http://127.0.0.1:3000/login_session/index.html?id="+search_pet+"&param2="+search_city+"&param3="+search_kind+"&param4="+search_age+"&param5="+search_user+"&param6="+search_sex;
+
+  				var pet = getParameterByName("id");
+  				var city = getParameterByName("param2");
+  				var kind = getParameterByName("param3");
+  				var age = getParameterByName("param4");
+  				var user = getParameterByName("param5");
+          var sex = getParameterByName("param6");
+
+
+
+  			});
+      });
 </script>
     <script src="app4.js"></script>
 
